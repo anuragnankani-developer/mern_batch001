@@ -1,0 +1,14 @@
+
+.fontColor{
+    color: green;
+}
+
+#giveColor{
+    color: red;
+}
+#mainId{
+    background-color: grey;
+}
+*{
+    background-color: aquamarine;
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* p:first-child{
+            color: red;
+        }
+        p:last-child{
+            color: green;
+        } */
+        p:nth-child(2n + 1){
+            color: blue;
+        }
+
+        tr:nth-child(2n + 1):not(.table-row){
+            color: red;
+            background-color: gray;
+        }
+        .heading:hover{
+            color: gray;
+            border: 2px solid gray;
+            width: 100px;
+            height: 100px;
+        }
+        div:empty{
+            border: 2px solid green;
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <!-- <p>Hello bro</p> -->
+    <!-- <div>
+        <p>i am paragraph tag</p>
+        <p>i am paragraph tag</p>
+        <p>i am another</p>
+        <p>i am another</p>
+        <p>i am another</p>
+        <p>i am another</p>
+        <p>i am another</p>
+        <p>i am another</p>
+        <p>i am another</p>
+        <p>i am another</p>
+    </div> -->
+<div></div>
+    <table border="1px">
+        <thead>
+            <tr class="table-row">
+                <th>SNO</th>
+                <th>Name</th>
+                <th>NUmber</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Abc</td>
+                <td>123456</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Xyz</td>
+                <td>87654</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Xyz</td>
+                <td>87654</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Xyz</td>
+                <td>87654</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Xyz</td>
+                <td>87654</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Xyz</td>
+                <td>87654</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Xyz</td>
+                <td>87654</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Xyz</td>
+                <td>87654</td>
+            </tr>
+            <tr class="table-row">
+                <td>9</td>
+                <td>Xyz</td>
+                <td>87654</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Xyz</td>
+                <td>87654</td>
+            </tr>
+        </tbody>
+    </table>
+    <h1 class="heading">I am heado=ing</h1>
+    <!-- <div>
+        <h1>i am head tag</h1>
+        <p>i am another</p>
+    </div>
+    <p>Hello second</p> -->
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .main {
+        width: 400px;
+        height: 400px;
+        background-color: aqua;
+      }
+      @keyframes moveLeft {
+        0% {
+          margin-left: 0px;
+          background-color: gray;
+        }
+        25% {
+          margin-left: 100px;
+          background-color: blue;
+          margin-top: 100px;
+        }
+        50% {
+          margin-left: 200px;
+          background-color: lime;
+          margin-top: 200px;
+        }
+        75% {
+          margin-left: 300px;
+          background-color: red;
+          margin-top: 300px;
+        }
+        100% {
+          margin-left: 400px;
+          background-color: blue;
+          margin-top: 400px;
+        }
+      }
+      .box {
+        width: 50px;
+        height: 50px;
+        background-color: black;
+        position: absolute;
+        background-color: aqua;
+      }
+
+      .box1 {
+        position: absolute;
+        animation-name: moveLeft;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-delay: 2s;
+      }
+      @keyframes moveStraight {
+        0% {
+          margin-left: 0px;
+          margin-top: 0px;
+          background-color: aqua;
+        }
+        25%{
+            margin-left: 100px;
+            margin-top: 100px;
+            background-color: aqua;
+        }
+        50%{
+            margin-top: 200px;
+            margin-left: 200px;
+            background-color: black;
+        }
+        75%{
+            margin-left: 300px;
+            background-color: black;
+            margin-top: 0px;
+        }
+        100%{
+            margin-left: 400px;
+            background-color: black;
+            margin-top: 0px;
+        }
+       
+
+      }
+
+      .box2 {
+        position: absolute;
+        animation-name: moveStraight;
+        animation-duration: 5s;
+         animation-delay: 2s;
+          animation-iteration-count: infinite;
+      }
+
+       @keyframes moveToBottom {
+        0% {
+          margin-left: 0px;
+          margin-top: 0px;
+          background-color: aqua;
+        }
+        25%{
+            margin-left: 100px;
+            margin-top: 100px;
+            background-color: aqua;
+        }
+        50%{
+            margin-top: 200px;
+            margin-left: 200px;
+            background-color: black;
+        }
+        75%{
+            margin-left: 0px;
+            background-color: black;
+            margin-top: 300px;
+        }
+        100%{
+            margin-left: 0px;
+            background-color: black;
+            margin-top: 400px;
+        }
+       
+
+      }
+
+      .box3 {
+        position: absolute;
+        animation-name: moveToBottom;
+        animation-duration: 5s;
+         animation-delay: 2s;
+         animation-iteration-count: infinite;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="box box1"></div>
+      <div class="box box2"></div>
+      <div class="box box3"></div>
+    </div>
+  </body>
+</html>

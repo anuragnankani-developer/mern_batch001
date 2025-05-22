@@ -1,0 +1,11 @@
+.div-class{
+    border: 2px solid gray;
+    color: green;
+    border-radius: 20px;
+    padding: 50px;
+    margin: 10px;
+}
+
+#myID{
+    color: green;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            background-color: gray;
+            color: white;
+            list-style-type: none;
+            display: flex;
+            gap: 20px;
+            justify-content: end;
+            text-align: center;
+            
+        }
+        li{
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        @media screen and (max-width:339px) {
+            ul{
+                display: flex;
+                gap: 10px;
+            }
+            
+        }
+        @media screen and (max-width:247px) {
+            ul{
+                display: block;
+                justify-content: left;
+                text-align: left;
+                gap: 20px;
+                height: 300px;
+                width: 100px;
+            }
+            li{
+                margin-top: 20px;
+                cursor: pointer;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>Home</li>
+        <li>Abous Us</li>
+        <li>Contact</li>
+        <li>FAQ</li>
+    </ul>
+    
+</body>
+</html>
