@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Positions</title>
+    <style>
+        .divident{
+            color: red;
+            background-color: green;
+            margin-left: 300px;
+            border: 2px solid gray;
+            border-radius: 5px;
+            width: 100px;
+        }
+         .divident1{
+            margin-top: 20px;
+            padding: 10px;
+        }
+          .divident-2{
+            font-size:x-large ;
+        }
+        #mainId{
+            color: green;
+            background-color: gray;
+        }
+        #anotherId{
+            margin-top: 30px;
+            background-color: yellow;
+        }
+        .main{
+            border: 2px solid;
+            width: 60%;
+            height: 800px;
+            position: absolute;
+        }
+        .box{
+            border: 2px solid gray;
+            width: 60px;
+            height: 50px;
+        }
+        .box-1{
+          position: static;
+          /* margin-left: 10px; */
+        }
+        .box-2{
+            position: relative;
+            /* left: 20px;
+            top: 30px; */
+        }
+        .box-3{
+            /* position: absolute; */
+            left: 200px;
+            top: 100px;
+        }
+        .box-4{
+            /* position: fixed; */
+            left: 300px;
+            top: 20px;
+        }
+        .box-5{
+            /* position: sticky; */
+            top: 20px;
+        }
+        .box-6{
+            /* position: inherit; */
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="box box-1">Static</div>
+        <div class="box box-2">Relative</div>
+        <div class="box box-3">Absolute</div>
+        <div class="box box-4">Fixed</div>
+        <div class="box box-5">Sticky</div>
+        <div class="box box-6">Inherit</div>
+        <div class="box ">1111</div>
+    </div>
+
+<!-- Concept of Multiple Classes in one element -->
+    <!-- <div class="divident">Hello coders</div>
+    <div class="divident divident1">I am the Coders</div>
+    <div class="divident divident1 divident-2">Heello to the IT Trainee</div> -->
+    <!-- Concept of Multiple ID in one element -->
+    <!-- <div id="mainId">i am the main id of div</div>
+    <div id="mainId anotherId">i am the second id of div</div> -->
+    
+</body>
+</html>

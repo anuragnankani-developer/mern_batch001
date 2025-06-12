@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button onclick="firstFunction()" >Click Me</button>
+    <button onclick="addition()" >Additon</button>
+    <!-- <button ondblclick="doubleFunction()" >Double Click Me</button>
+
+    <button onmouseover="mouseOverFunction()" >Mouse Over</button>
+
+    <button onkeydown="mouseOutFunction()" >Mouse Out</button> -->
+
+
+    <script>
+
+      let addition = function(){
+            c = 10;
+            b = 20;
+
+          console.log(  c + b) 
+
+           console.log(c, 'value of c')
+           console.log(b, 'value of b')
+
+
+        }
+
+
+
+        // addition(10, 20)
+
+        // console.log(addition)
+
+        let myFun=()=>{
+             c = 10;
+            b = 20;
+
+          console.log(  c + b) 
+
+        }
+        myFun()
+
+        let newFun =(()=>{
+             c = 30;
+            b = 20;
+
+          console.log( "value is : ", c + b) 
+
+        })
+        newFun()
+
+        let anotherFun =(a,b)=>{ 
+          return  a + b 
+        }
+
+     console.log( anotherFun(1,3) )
+
+     let myNewFun = a => console.log(a,'value of aaa')
+
+     myNewFun()
+        // var a = 10;
+
+        // function firstFunction(){
+
+        //     console.log(' I am first function')
+        //     // var a = 20;
+        //     console.log(a)
+        //     // document.write('The Function is Clicked')
+
+
+        // }
+
+        // let a = "ANURAG";
+
+        function firstFunction(){
+            let a = 20;
+
+            console.log(a,'value of aaaa')
+
+            console.log(' I am first function')
+            
+            console.log(a)
+            // document.write('The Function is Clicked')
+
+
+        }
+
+        
+
+
+        // console.log(a,'new value')
+
+        function doubleFunction(){
+            console.log('i am adouble function')
+
+        }
+        function mouseOverFunction(){
+            console.log(' Moused is over on the button')
+        }
+
+        function mouseOutFunction(){
+            console.log('Mouse is out from the b utton')
+        }
+
+        // firstFunction()
+
+    </script>
+    
+</body>
+</html>

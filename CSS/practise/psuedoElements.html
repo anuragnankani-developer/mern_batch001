@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button:hover{
+            background-color: red;
+            cursor: pointer;
+            width: 100px;
+            height: 50px;
+        }
+        .fname:hover::after{
+            content: "XCODERS";
+        }
+        .images::after{
+            content: " ";
+            background-image: url(2.jpg);
+            margin-left: 200px;
+            background-repeat: no-repeat;
+            
+            
+        }
+        .fname::first-letter{
+            font-size: 30px;
+            
+        }
+        .fname::selection{
+            font-size: 30px;
+            background-color: gray;
+        }
+        
+        input::placeholder{
+            color: red;
+            margin-left: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+    <button>Click Me</button>
+    <p class="fname">Hello my name is Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+        Dolores tempora neque in mollitia laudantium voluptatum officia, delectus vero at sint. 
+        Dignissimos laboriosam laudantium aliquid neque, id aut ullam fugit nisi officiis quia itaque vitae magnam. 
+        In et laudantium error vitae eveniet. Voluptas possimus modi pariatur quas cumque facere labore deleniti dolores 
+        blanditiis asperiores? Alias quam perferendis recusandae asperiores quia! Aspernatur optio incidunt hic culpa eaque? 
+        Totam minus expedita quasi. Molestias eius architecto assumenda, iusto vero ab sapiente consequuntur? Doloremque, 
+        autem. Vitae quidem dolor repudiandae nostrum deserunt mollitia voluptates, praesentium possimus error deleniti 
+        voluptatum earum itaque minus cumque ipsam maxime eveniet facere adipisci alias, debitis illum eligendi, sapiente 
+        ut temporibus. </p>
+    <p class="images">I am an image</p>
+
+    <form action="">
+        <input type="text" placeholder="      Enter Your Full Name">
+    </form>
+    
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+      }
+      .box {
+        width: 150px;
+        height: 100px;
+        border: 1px solid;
+      }
+      .box-1 {
+        background-color: gray;
+      }
+      .box-2 {
+        background-color: green;
+      }
+      .box-3 {
+        background-color: yellow;
+      }
+      .box-4 {
+        background-color: red;
+      }
+      .box-5 {
+        background-color: black;
+      }
+      @media screen and (max-width: 850px) {
+        .box {
+          width: 100px;
+          height: 80px;
+        }
+      }
+      @media screen and (max-width: 599px) {
+        .box {
+          width: 75px;
+          height: 60px;
+        }
+      }
+      @media screen and (min-width: 300px) and (max-width: 500px) {
+        .container {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+        }
+        .box{
+            border: 2px solid;
+            border-radius: 50px;
+        }
+      }
+      ul{
+        display: flex;
+        background-color: rgb(161, 79, 79);
+        height: 50px;
+        gap: 20px;
+        list-style-type: none;
+        justify-content: right;
+       align-items: center;
+    
+      }
+      li{
+        margin-right: 20px;
+      }
+      @media screen and (min-width:552px) and (max-width:602px) {
+         ul{
+        display: flex;
+        background-color: rgb(161, 79, 79);
+        height: 50px;
+        gap: 10px;
+        list-style-type: none;
+        justify-content: right;
+       align-items: center;
+    
+      }
+        
+      }
+
+      @media screen and (max-width:286px) {
+        ul{
+            display: block;
+            height: auto;
+            margin: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+        <li>Home</li>
+        <li>About Us</li>
+        <li>Contact Us</li>
+        <li>Achievements</li>
+        <li>Help</li>
+        <li>Blog</li>
+    </ul>
+
+    <div class="container">
+      <div class="box box-1"></div>
+      <div class="box box-2"></div>
+      <div class="box box-3"></div>
+      <div class="box box-4"></div>
+      <div class="box box-5"></div>
+    </div>
+  </body>
+</html>
