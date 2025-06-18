@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // push and pop
+
+      let arr = [1, 2, 3, 4, 5];
+
+      arr.push(6);
+
+      console.log(arr);
+
+      arr.pop();
+      console.log(arr);
+
+      // shift and unshift
+
+      let arr_1 = [1, 2, 3, 4, 5];
+
+      arr_1.unshift(10);
+      console.log(arr_1);
+
+      arr_1.shift();
+      console.log(arr_1);
+
+      // concat
+
+      let student = ["a", "b", "c"];
+      let newStudent = ["d", "e", "f"];
+
+      let totalStudents = newStudent.concat(student, arr_1);
+
+      console.log(totalStudents);
+
+      // join
+
+      newStudent = ["d", "e", "f"];
+      const newArr = newStudent.join(" ");
+      console.log(newArr);
+
+      // sort
+
+      let alphabet = ["d", "z", "y", "a", "b", "c"];
+
+      alphabet.sort();
+      console.log(alphabet);
+
+      let numbers = [11, 10, 99, 8, 2, 0, 4, 5, 1];
+
+      numbers.sort((a, b) => b - a);
+      console.log(numbers);
+
+      // reverse
+
+      alphabet.reverse();
+      console.log(alphabet);
+
+      // at
+
+      let numbers_at = [11, 10, 99, 8, 2, 0, 4, 5, 1];
+
+      let findValue = numbers_at.at(2);
+      console.log(findValue);
+
+
+      //flat
+
+      let array = [11, [10, 99,[1,2,3,[10,111,1144]]], [8, 2], 0, 4, 5, 1]
+
+      let flat_array = array.flat(3)
+
+      console.log(flat_array)
+
+      const lengthArray= flat_array.length
+      console.log(lengthArray);
+
+      // indexOf and lastIndexOf
+
+      let checkIndex = [11, 10, 99, 8, 2, 0, 4, 5,99, 1,99];
+
+      let findIndex =  checkIndex.lastIndexOf(99);
+      console.log(findIndex);
+
+          // Delete
+
+      let allArray = [11, 10, 99, 8, 2, 0, 4, 5,99, 1,99];
+
+      delete allArray[2]
+      console.log('deleted value:',allArray[2])
+
+      // Slice
+
+      let allNumbers = [11, 10, 99, 8, 2, 0, 4, 5,99, 1,99];
+
+      let slicedData = allNumbers.slice(2,2);
+      console.log('slice:', slicedData);
+
+      // Splice
+
+      let totalNumbers = [11, 10, 99, 8, 2, 0, 4, 5,99, 1,99];
+
+      totalNumbers.splice(2);
+
+      console.log(totalNumbers);
+      
+      
+  
+
+
+
+
+
+
+
+    </script>
+  </body>
+</html>
