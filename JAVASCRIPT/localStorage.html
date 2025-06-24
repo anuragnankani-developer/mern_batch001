@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let firstName = "sourabh";
+
+      localStorage.setItem("fName", firstName);
+      let first = localStorage.getItem("fName");
+      console.log(first);
+
+      let arr = ["sameer", 20, 30];
+      localStorage.setItem("array", arr);
+      let getArr = localStorage.getItem("array");
+      console.log(getArr);
+
+      let obj = {
+        name: "aamish",
+        email: "amish@gmail.com",
+        number: "9876543212",
+      };
+
+      let obj1 = {
+        name: "shrey",
+        email: "shrey@gmail.com",
+        number: "9876543212",
+      };
+
+      localStorage.setItem("obj", JSON.stringify(obj1));
+      let objectData = JSON.parse(localStorage.getItem("obj"));
+      console.log(objectData);
+      console.log(objectData.name);
+
+      let storageData = JSON.parse(localStorage.getItem("allData")) || [];
+      console.log(storageData,'jhghfg')
+
+      storageData.push({
+        name: "aamish",
+        email: "aamish@gmail.com",
+        number: "7686756567",
+      });
+     let getSavedData = localStorage.setItem("allData", JSON.stringify(storageData));
+
+     console.log(getSavedData)
+
+    </script>
+  </body>
+</html>

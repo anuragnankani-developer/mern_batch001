@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        let arr = [ "abhishek", "bacchan", 45, "indore", "actor", "aishwarya",["abcd","xyz"]];
+        // let fname = arr[0];
+        // console.log(fname);
+        // let lname = arr[1];
+        // console.log(lname);
+        // let age = arr[2];
+        // console.log(age);
+        // let place = arr[3];
+        // console.log(place);
+
+        //Destructuring of Array
+
+        let [fname, lname, age, place, profession, wifes_name,[alpha, lastAlpha]] = arr;
+        console.log(fname);
+        console.log(lname);
+        console.log(age);
+        console.log(place);
+        console.log(alpha);
+        console.log(lastAlpha);
+    </script>
+    
+</body>
+</html>

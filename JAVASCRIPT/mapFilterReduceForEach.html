@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        //map
+
+        const numbers = [1,2,3,4,5];
+
+        const newNumbers = numbers.map((val, ind)=>{
+            return val ** val
+
+        })
+
+        console.log(newNumbers);
+
+
+
+        // filter
+
+        const filteredData = numbers.filter((value)=>{
+            return value <= 1
+
+        })
+        console.log(filteredData);
+
+        // find
+         const findData = numbers.find((value)=>{
+            return value <= 1
+
+        })
+        console.log(findData);
+
+        // reduce
+        // const numbers = [1,2,3,4,5];
+
+        const reduceData = numbers.reduce((accmulator, currentValue)=>{
+            
+            return accmulator + currentValue
+
+        },10)
+
+        console.log(reduceData);
+
+        const num = [1,1,1,1];
+        const addOne = num.map((array, value)=>{
+            return array + value;
+        })
+        console.log(addOne)
+
+        // forEach
+
+       const forEachData = numbers.forEach((value)=>{
+            return value;
+        })
+        console.log(forEachData);
+
+        function myData(){
+            x = 10;
+            console.log(x)
+        }
+        myData()
+
+
+
+    </script>
+    
+</body>
+</html>
