@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        setTimeout(()=>{
+            console.log('First Function');
+            setTimeout(()=>{
+                 console.log('Second Function');
+                setTimeout(()=>{
+                     console.log('Third Function');
+                     setTimeout(()=>{
+                         console.log('Fourth Function');
+                         setTimeout(()=>{
+                             console.log('Fifth Function');
+                            setTimeout(() => {
+                                 console.log('sIXTH Function');
+                                 setTimeout(() => {
+                                     console.log('Seventh Function');
+                                     setTimeout(() => {
+                                         console.log('Eight Function');
+                                         setTimeout(() => {
+                                             console.log('Ninth Function');
+                                             setTimeout(() => {
+                                                 console.log('Tenth Function');
+                                             }, 1000);
+                                         }, 3000);
+                                     }, 1000);
+                                 }, 1000);
+                            }, 4000);
+                         },2000)
+                     },4000)
+                },1000)
+            },3000)
+        },2000)
+
+    </script>
+    
+</body>
+</html>

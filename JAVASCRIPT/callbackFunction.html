@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+
+
+
+    <script>
+      function normalFun(a, b, callback) {
+        console.log(a + b, "Hellooo");
+
+        callback("i am a call back function");
+      }
+
+      function secondFun(value) {
+        console.log(value, "hello i am a second function");
+      }
+
+      console.log(normalFun(10, 20, secondFun));
+      // console.log(secondFun())
+
+      
+      // alternate option to write callback function
+    //   console.log(normalFun(10, 20, function(){
+    //     console.log('anonymoussss')
+    //   }));
+
+      setTimeout(()=>{
+        console.log('timer function')
+
+      }, 2000)
+      var a = 10;
+      console.log(a)
+    </script>
+
+
+  </body>
+</html>

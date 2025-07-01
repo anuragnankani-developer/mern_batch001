@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        // Closure
+        // function add(a,b){
+        //     let alpha = a + b;
+
+
+        //     function addition(){
+        //         console.log(alpha)
+        //     }
+        //     addition()
+            
+        // }
+
+        // add(1,2)
+
+
+        // Currying Function
+
+        function addNumbers(a,b,c){
+            console.log( a + b + c)
+
+        }
+
+        // addNumbers(1,2,3);
+
+        function curryingFun(a){
+            return function(b){
+                return function(c){
+                    return function(d){
+                        return a + b + c + d
+                    }
+                }
+            }
+        }
+
+        let firstPara = curryingFun(10);
+        console.log(firstPara)
+        let secondPara = firstPara(20);
+        console.log(secondPara)
+        let thirdPara = secondPara(30);
+        console.log(thirdPara)
+
+      console.log(curryingFun(1)(2)(34)(10));
+
+      // Infinite Curring Function
+
+      function curry(a){
+        return function(b){
+            if(b) return curry(a + b)
+            return a;
+        }
+    
+
+      }
+
+      console.log(curry(1)(10)(21)());
+
+
+     
+
+
+
+    </script>
+    
+</body>
+</html>

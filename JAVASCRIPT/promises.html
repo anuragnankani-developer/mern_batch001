@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let promises = new Promise((resolve, reject)=>{
+           setTimeout(()=>{
+             resolve("This promise is Resolved")
+           },5000)
+        })
+        // promises.then((value)=>{
+
+        //     console.log("this is the value of resolved promise:",value)
+
+        // })
+        // .catch((error)=>{
+        //     console.error(error)
+        // })
+
+        let fname = "mern"
+        console.log(fname);
+
+
+        let myPromise = new Promise((resolve, reject)=>{
+            setTimeout(()=>{
+                resolve("This is myPromise-Resolved")
+            },4000)
+
+        })
+        // myPromise.then((res)=>{
+        //     console.log(res)
+        // })
+        // .catch((err)=>{
+        //     console.warn("warning:",err)
+        // })
+
+        let myPromise_1 = new Promise((resolve, reject)=>{
+            setTimeout(()=>{
+                reject("You are resolvedddddddddd")
+            },2000)
+        })
+
+        let allPromises = [promises, myPromise, myPromise_1 ];
+
+        Promise.race(allPromises)
+
+        .then((res)=>{
+            console.log(res)
+        })
+        .catch((err)=>{
+            console.log("warning:",err)
+        })
+
+
+    </script>
+    
+</body>
+</html>

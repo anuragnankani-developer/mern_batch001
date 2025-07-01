@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        // Rest operator
+
+
+        function restFun(a,b, ...c){
+            return a + b + c;
+            // return a + b + c.reduce((accmulator, currentValue)=>{
+
+            // },0);
+        }
+
+        console.log(restFun(1,2,3,4,5))
+
+        // 11 2 3 4 5
+        // 33 34 35
+        // 3 
+
+        // 1 + 2 + [3,4,5]
+
+        const arr =  ["shrey", "shreya@gmail.com", 9876543454, 22, "india", "mp","indore"];
+
+        const [name, email, contact, ...otherValues] = arr;
+        console.log(name)
+        console.log(email)
+        console.log(contact)
+        console.log(otherValues)
+
+        const obj = {
+            name:"sameer",
+            email:"sameer@gmail.com",
+            contact:9876767676,
+            age:25
+        };
+
+        const {name:fname, email:objEmail, ...other} = obj;
+
+        // console.log(fname)
+        // console.log(objEmail)
+        console.log(other)
+
+
+    </script>
+
+    <script>
+
+        // Spread Operator
+        // Array Spread, merge array, clone(copy)
+
+        let numbers = [10,20,30,40]
+
+        function myFun(a,b,c,d){
+            return a + b + c + d
+        }
+
+        console.log( myFun(...numbers));
+
+        // merge
+        let arr1 = [1,2,3];
+        let arr2 = [4,5,6];
+        let arr3 = [...arr1, arr2];
+        console.log(arr3);
+
+        // copy     
+        let arr4 = [11, "abcd",...arr1];
+        console.log(arr4);
+
+        // use spread for object
+
+        let spreadObj = {
+            fullname:"amish",
+            age: 30
+        }
+        let newObj = { ...spreadObj, age:22,email:"abcd" };
+        console.log(newObj);
+
+        
+    </script>
+    
+</body>
+</html>
