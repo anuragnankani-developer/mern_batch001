@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Hello i am a software &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; developer</h1>
+    <h1>This is a &copy; copyright.....</h1>
+
+    <script>
+      // for (let index = 0; index <= 5; index++) {
+
+      //     // document.write(index);
+      //     // for (let j = 5; j >= index; j--) {
+      //     //     document.write("&nbsp;")
+      //     // }
+      //     for (let j = 0; j <=5 - index; j++) {
+      //         document.write("&nbsp;")
+      //     }
+
+      //     for (let i = 0; i <= index; i++) {
+
+      //         document.write("*")
+
+      //     }
+      //     document.write(" <br> ")
+
+      // }
+
+      for (let index = 0; index <= 5; index++) {
+        for (let i = 0; i <= 5; i++) {
+          if (index == 0 || index == 5 || i == 0 || i == 5) {
+            document.write("*");
+          } else {
+            document.write("&nbsp;&nbsp;");
+          }
+        }
+        document.write(" <br> ");
+      }    
+    </script>
+  </body>
+</html>

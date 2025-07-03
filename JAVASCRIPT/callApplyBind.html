@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        
+        const obj = {
+            name:"shrey",
+            mob:876767667,
+            myFun: function(a,b){
+                return this.name + this.mob + " " + a + b
+            }
+        }
+
+        const data={
+            name:"sourabh",
+            mob:"1456"
+        }
+
+        const fname={
+            name:"alok"
+        }
+
+
+
+        console.log(obj.myFun.call(data,10))
+        console.log(obj.myFun.call(fname))
+        console.log(obj.myFun())
+
+         console.log(obj.myFun.apply(data, [20,60]))
+        const myData= obj.myFun.bind(data,20,60)
+      console.log(myData())
+
+
+        const obj1 = {
+            name:"shrey",
+            mob:876767667,
+        }
+        function myfu(obj){
+            return obj.name
+        }
+
+        console.log(myfu(obj1))
+        
+
+    </script>
+
+    
+</body>
+</html>
