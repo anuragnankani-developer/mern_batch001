@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        
+
+        let obj = {
+            name:"aamish",
+            userName: "aamish1234",
+            contact: 8767676765
+        };
+
+        // keys
+        let findKeys = Object.keys(obj);
+        console.log(findKeys);
+    
+        // values
+        let findValues = Object.values(obj);
+        console.log(findValues);
+
+        // entries
+
+        let getEntries = Object.entries(obj);
+        console.log(getEntries);
+
+        // assign
+        let anotherObj = {
+            email: "amish@gmail.com"
+        }
+        // let newObj = Object.assign({}, obj,anotherObj)
+        // let newObj = Object.assign({}, obj,{hobbies:"cricket"})
+        let newObj = Object.assign(anotherObj, "alok")
+
+        console.log(newObj);
+
+
+
+
+        let myObj = {
+            name: "shrey",
+            age: 22
+        };
+
+        Object.seal(myObj); // only can modify or update the existing key's value but can not delete or add new key:value
+
+        myObj.name = "shorabh"
+        myObj.email = "shrey@gmail.com"
+        delete myObj.age
+        console.log(myObj);
+
+        let freezeObj= {
+            name: "alok",
+            email:"alok@gmail.com"
+        };
+        Object.freeze(freezeObj) // it can't do anything no modification or update or add new values 
+        freezeObj.name = "lavisha"
+        freezeObj.age = 22
+        delete freezeObj.email
+        console.log(freezeObj);
+
+
+        // Object.is
+
+        let a = NaN;
+        let b = NaN;
+        console.log(a == b);
+        console.log(Object.is(a, b));
+
+        let c = +0;
+        let d = -0;
+        console.log(c==d);
+        console.log(Object.is(c,d));
+
+        let e = +2;
+        let f = -2;
+        console.log(e == f);
+        console.log(Object.is(e,f));
+
+        // create
+let fname = "lavisha"
+        let createObj = {
+            myFun(){
+                console.log('Hey' + ""+ this.name);
+            }
+        }
+
+        let newObject = Object.create(createObj,{
+            name: {
+                value: "alok",
+                writable: true
+            }
+        }
+    );
+    
+        newObject.name = fname;
+        console.log(createObj);
+        newObject.myFun();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // var a = 10;
+
+        // setTimeout(()=>{
+        //     console.log('hello');
+        // },0);
+        
+
+        // const mypromises = new Promise((resolve)=>{
+        //     resolve("Promise is resolved")
+        //      console.log('This is my promise');
+        // })
+        //  console.log(a);
+        // mypromises.then((res)=>{
+        //     console.log(res);
+        // })
+
+        // 10
+        // promise is resolved
+        // this is my proimise
+        // hello
+
+    </script>
+    
+</body>
+</html>
