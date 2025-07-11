@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body >
+
+    <button style="margin-left: 400px;" onclick="newWindow()" >Click Me</button>
+    <button style="margin-left: 400px;" onclick="closeWindow()" >Close Window</button>
+    <button style="margin-left: 400px;" onclick="resizeWindow()" >Move Window</button>
+
+    <script>
+        
+
+
+        function checkHeightWidth(){
+            console.clear()
+        let inner_width = window.innerWidth;
+        console.log("inner width:",inner_width)
+        let outer_width = window.outerWidth;
+        console.log("outer width", outer_width)
+
+        let inner_height = window.innerHeight;
+        console.log("inner height:", inner_height);
+        let outer_height = window.outerHeight;
+        console.log("outer height", outer_height);
+        }
+
+        var openTheWindow;
+        function openNewWindow(){
+           openTheWindow = window.open("https://www.youtube.com"," ", "width=300px, height=200px, top=100px, left= 100px")
+        }
+        function closeWindow(){
+            openTheWindow.close()
+        }
+
+    //     function moveWindow(){
+    // openTheWindow.moveTo(100,100) //left and top
+    // }
+
+
+//     var mywindow;
+// function newWindow(){
+//     mywindow= window.open("","","width=200px, height=200px, left=200px, top=100px")
+//     mywindow.document.write("<h1> Hello window </h1> ")
+// }
+// function moveWindow(){
+//     mywindow.moveBy(400,200) //left and top
+// }
+
+var mywindow;
+function newWindow(){
+    mywindow= window.open("","","width=200px, height=200px, left=200px, top=200px")
+    mywindow.document.write("<h1> Hello window </h1> ")
+}
+function resizeWindow(){
+    mywindow.resizeTo(400,400) //width and height
+}
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
