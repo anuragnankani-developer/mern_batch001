@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        let a = 30;
+        
+        setTimeout(()=>{
+            console.log('I am a call back function');
+        },0) // task queue
+        let myPromise = new Promise((resolve, reject)=>{
+            resolve('My promise is resolved') // call stack
+            console.log('This is alone promise')
+        })
+       
+       myPromise.then((res)=>{
+        console.log(res); //poping
+       })
+
+       console.log(a);
+
+
+
+
+       let alpha = "starting alphabet";
+       console.log(alpha);
+
+       setTimeout(() => {
+            console.log('Another timeout');
+       }, 0); //task queue
+
+       let thePromise = new Promise((resolve,reject)=>{
+        resolve('My promise'); // call stack
+       })
+        thePromise.then((res)=>{
+        console.log(res); //poping
+       })
+
+       let another = "ending Alphabet"
+       console.log(another); // synchronous
+
+       // starting
+       // 
+
+       function one(){
+        console.log('i am first function')
+        two()
+       };
+
+       function two(){
+        console.log('i am second function')
+        three()
+       };
+       function three(){
+        console.log('i am third function');
+       };
+
+       one();
+
+
+        
+
+    </script>
+    
+</body>
+</html>
