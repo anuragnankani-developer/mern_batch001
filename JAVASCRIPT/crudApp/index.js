@@ -11,7 +11,13 @@ function addUser(){
     }else{
         let getData = JSON.parse(localStorage.getItem("userInfo")) || [];
 
+        let compareEmail = getData.some((value)=> value.email === email);
+        if(compareEmail){
+            return alert('Email is already Registered')
+        }
+
     let userObj = {
+        id: randomId() ,
         fullname: fullName,
         username: userName,
         email: email,
@@ -21,12 +27,13 @@ function addUser(){
 
     localStorage.setItem("userInfo", JSON.stringify(getData));
     alert('User Added Successfully');
+    
 
     }
-    console.log('dataaaaaaaaaaa')
-
+    
     
 }
+showUsers();
 
 function showUsers(){
     const users = JSON.parse(localStorage.getItem("userInfo")) || [];
@@ -34,8 +41,6 @@ function showUsers(){
     const setData = document.getElementById('tableBody');
 
     const userData = users.map((value, index)=>{
-        // console.log(value)
-        console.log(value.fullname, value.username, value.email, value.password);
        return `
         <tr> 
         <td> ${index + 1 } </td> 
@@ -43,20 +48,26 @@ function showUsers(){
         <td> ${value.username} </td> 
         <td> ${value.email} </td> 
         <td> ${value.password} </td> 
+        <td> <button class="btn btn-primary" >Edit</button>  
+        <button class="btn btn-danger" onclick="removeUser('${value.email}')" >Delete</button> </td> 
+        
 
         </tr>
         `       
 
     })
      setData.innerHTML = userData.join("")
-
-     let arr = [1,2,3,4,5];
-     let joinData=arr.join("-")
-    
-console.log(joinData);
-
-
-
-
 }
-showUsers();
+
+function randomId(){
+     return Date.now().toString(36) + Math.random().toString(36).substr(2,8)
+}
+    // let findDate = Date.now().toString(36) + Math.random()
+    // let findDate = Date.now().toString(36) + Math.floor(Math.random())
+    let findDate = Date.now().toString(36) + Math.random().toString(36).substr(2,8)
+// console.log(findDate)
+
+function removeUser(email){
+    console.log(email)
+}
+
