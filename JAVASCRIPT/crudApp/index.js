@@ -27,13 +27,11 @@ function addUser(){
 
     localStorage.setItem("userInfo", JSON.stringify(getData));
     alert('User Added Successfully');
-    
-
     }
     
     
 }
-showUsers();
+
 
 function showUsers(){
     const users = JSON.parse(localStorage.getItem("userInfo")) || [];
@@ -49,9 +47,7 @@ function showUsers(){
         <td> ${value.email} </td> 
         <td> ${value.password} </td> 
         <td> <button class="btn btn-primary" >Edit</button>  
-        <button class="btn btn-danger" onclick="removeUser('${value.email}')" >Delete</button> </td> 
-        
-
+        <button class="btn btn-danger" onclick="removeUser(${value.email})" >Delete</button> </td> 
         </tr>
         `       
 
@@ -69,5 +65,28 @@ function randomId(){
 
 function removeUser(email){
     console.log(email)
+    if(!email){
+        return alert('Email is Required')
+    }
+    // debugger
+    // let allData = JSON.parse(localStorage.getItem("userInfo")) || [];
+
+    // if(index !== -1){
+    //      allData.splice(index,1)
+
+    //     localStorage.setItem("userInfo", JSON.stringify(allData))
+    // }
+    // let selectedIndex = allData.findIndex((value)=> value.email === email );
+    // console.log(selectedIndex);
+    // if(selectedIndex !== -1){
+    //      allData.splice(selectedIndex,1)
+
+    //     localStorage.setItem("userInfo", JSON.stringify(allData))
+    // }
+
+    let filteredData = allData.filter((value)=> value.email !== email)
+    console.log(filteredData)
+    localStorage.setItem("userInfo", JSON.stringify(filteredData))
 }
 
+showUsers();
