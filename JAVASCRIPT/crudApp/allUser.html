@@ -116,7 +116,7 @@
         </div>
         <div class="col py-3">
    <h1>All Users</h1>
-   <table class="table">
+   <table class="table" id="myTable">
   <thead>
     <tr>
       <th scope="col">#</th>
@@ -130,9 +130,32 @@
   <tbody id="tableBody">
   </tbody>
 </table>
+
+         <form id="myForm" style="display: none;" >
+  <div class="form-group">
+     <label for="editFullname">Full Name</label>
+    <input type="text" class="form-control" id="editFullname" placeholder="Enter Full Name">
+    
+     <label for="editUserName">Username</label>
+    <input type="text" class="form-control" id="editUserName" placeholder="Enter Username">
+    
+    <label for="editUseremail">Email address</label>
+    <input type="email" class="form-control" id="editUseremail" placeholder="Enter email" disabled >
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="editUserpassword">Password</label>
+    <input type="password" class="form-control" id="editUserpassword" placeholder="Password">
+  </div>
+
+  <button type="submit" class="btn btn-primary" onclick="updateUser(event)" >Update</button>
+  <button type="submit" class="btn btn-primary" onclick="hideForm(event)" >Cancel</button>
+</form>
         </div>
     </div>
 </div>
+
+ 
 
 
    <!-- Footer -->
