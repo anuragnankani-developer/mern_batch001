@@ -13,6 +13,7 @@ import Header from './Header';
 import { useState } from 'react';
 import { First } from './First';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Second from './Second';
 // import navbar from './Navbar';
 // import Navbar from './Navbar';
 // import react,{useState} from 'react';
@@ -44,11 +45,15 @@ function App() {
     {/* <First /> */}
     {/* <Footer /> */}
     <Router>
+
     <Routes>
+
       <Route exact path='/' element={ <First />  }   />
       <Route exact path='/header/footer' element={ <Footer />  }  />
+      <Route exact path='/second' element={ <Second /> } />
 
     </Routes>
+
     </Router>
 
     </div>
