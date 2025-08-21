@@ -13,7 +13,9 @@ function First() {
 
   const navigateTo=()=>{
     // navigate('/header/footer',{state:['shrey',data]})
-    navigate('/header/footer',{state:{name:'Sourabh', data:data, designation:myDesignation}})
+    navigate('/header/footer',{replace:true, state:{name:'Sourabh', data:data, designation:myDesignation}})
+    navigate(1)
+    navigate(-1)
   }
 
   return (
