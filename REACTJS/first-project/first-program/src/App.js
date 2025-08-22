@@ -17,6 +17,7 @@ import Second from './Second';
 import MyMinComp from './MyMinComp';
 import ParamsData from './ParamsData';
 import SendParamData from './SendParamData';
+import CompA from './propDrilling/CompA';
 // import navbar from './Navbar';
 // import Navbar from './Navbar';
 // import react,{useState} from 'react';
@@ -54,7 +55,8 @@ function App() {
       <Route exact path='/first' element={ <First />  }   />
       <Route exact path='/header/footer' element={ <Footer />  }  />
       <Route exact path='/second' element={ <Second /> } />
-      <Route exact path='/' element={ <MyMinComp /> } />
+      <Route exact path='/myMinComp' element={ <MyMinComp /> } />
+      <Route exact path='/' element={ <CompA /> } />
       <Route exact path='/paramData' element={ <ParamsData /> } />
       <Route exact path='/sendParam/:designation/:name' element={ <SendParamData /> } />
 
