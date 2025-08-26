@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { memo } from 'react'
 
 function Second() {
     console.log('i am second component')
   return (
-    <div>Second</div>
+    <>
+    </>
   )
 }
 
-export default Second
+export default memo(Second) 
