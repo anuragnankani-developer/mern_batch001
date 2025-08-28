@@ -21,6 +21,8 @@ import CompA from './propDrilling/CompA';
 import UseEffect from './hooks/UseEffect';
 import UseMemo from './hooks/UseMemo';
 import UseCallback from './hooks/UseCallback';
+import FirstsPage from './hooks/custom-hooks/FirstsPage';
+import SecondPage from './hooks/custom-hooks/SecondPage';
 // import navbar from './Navbar';
 // import Navbar from './Navbar';
 // import react,{useState} from 'react';
@@ -61,7 +63,9 @@ function App() {
       <Route exact path='/myMinComp' element={ <MyMinComp /> } />
       <Route exact path='/compA' element={ <CompA /> } />
       <Route exact path='/useEffect' element={ <UseEffect /> } />
-      <Route exact path='/' element={ <UseCallback /> } />
+      <Route exact path='/useCallback' element={ <UseCallback /> } />
+      <Route exact path='/' element={ <FirstsPage /> } />
+      <Route exact path='/' element={ <SecondPage /> } />
       <Route exact path='/useMemo' element={ <UseMemo /> } />
       <Route exact path='/paramData' element={ <ParamsData /> } />
       <Route exact path='/sendParam/:designation/:name' element={ <SendParamData /> } />
