@@ -23,6 +23,8 @@ import UseMemo from './hooks/UseMemo';
 import UseCallback from './hooks/UseCallback';
 import FirstsPage from './hooks/custom-hooks/FirstsPage';
 import SecondPage from './hooks/custom-hooks/SecondPage';
+import UseRef from './hooks/UseRef';
+import UseReducer from './hooks/UseReducer';
 // import navbar from './Navbar';
 // import Navbar from './Navbar';
 // import react,{useState} from 'react';
@@ -57,6 +59,7 @@ function App() {
 
     <Routes>
 
+
       <Route exact path='/first' element={ <First />  }   />
       <Route exact path='/header/footer' element={ <Footer />  }  />
       <Route exact path='/second' element={ <Second /> } />
@@ -64,8 +67,10 @@ function App() {
       <Route exact path='/compA' element={ <CompA /> } />
       <Route exact path='/useEffect' element={ <UseEffect /> } />
       <Route exact path='/useCallback' element={ <UseCallback /> } />
-      <Route exact path='/' element={ <FirstsPage /> } />
-      <Route exact path='/' element={ <SecondPage /> } />
+      <Route exact path='/firstPage' element={ <FirstsPage /> } />
+      <Route exact path='/secondPage' element={ <SecondPage /> } />
+      <Route exact path='/useRef' element={ <UseRef /> } />
+      <Route exact path='/' element={ <UseReducer /> } />
       <Route exact path='/useMemo' element={ <UseMemo /> } />
       <Route exact path='/paramData' element={ <ParamsData /> } />
       <Route exact path='/sendParam/:designation/:name' element={ <SendParamData /> } />
